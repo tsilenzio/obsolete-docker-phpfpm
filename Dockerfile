@@ -1,4 +1,4 @@
-FROM tsilenzio/php:7.0-fpm
+FROM tsilenzio/php:5.6-fpm
 
 MAINTAINER Taylor Silenzio <tsilenzio@gmail.com>
 
@@ -55,6 +55,7 @@ RUN apt-get update \
         xsl \
         zip \
     # Install configuration files
+    && mkdir -p /usr/local/etc/php-fpm.d \
     && rm -rf /usr/local/etc/php-fpm.d/www.conf.default \
     && rm -rf /usr/local/etc/php-fpm.conf \
     && mv /tmp/www.conf /usr/local/etc/php-fpm.d/www.conf \
