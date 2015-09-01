@@ -1,4 +1,4 @@
-FROM tsilenzio/php:5.5-fpm
+FROM tsilenzio/php:5.4-fpm
 
 MAINTAINER Taylor Silenzio <tsilenzio@gmail.com>
 
